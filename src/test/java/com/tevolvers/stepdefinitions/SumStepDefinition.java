@@ -22,6 +22,7 @@ public class SumStepDefinition {
 
     @Managed
     private AndroidDriver driver;
+    
     @Given("that {actor} open the calculator")
     public void thatPedroOpenTheCalculator(Actor actor) {
         actor.whoCan(PlayTheApp.with(driver));
