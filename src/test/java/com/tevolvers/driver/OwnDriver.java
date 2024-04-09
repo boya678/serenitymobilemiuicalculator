@@ -9,18 +9,18 @@ import java.util.concurrent.TimeUnit;
 public class OwnDriver {
     private static AndroidDriver driver;
 
-    public static AndroidDriver init(){
-        DesiredCapabilities desiredCapabilities=new DesiredCapabilities();
-        desiredCapabilities.setCapability("platformName","android");
-        desiredCapabilities.setCapability("deviceName","3824459c");
-        desiredCapabilities.setCapability("appActivity","com.miui.calculator.cal.CalculatorActivity");
-        desiredCapabilities.setCapability("appPackage","com.miui.calculator");
-        desiredCapabilities.setCapability("noReset","true");
+    public static AndroidDriver init() {
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setCapability("appium:password", "GranjaT-E2024*");
+        desiredCapabilities.setCapability("platformName", "android");
+        desiredCapabilities.setCapability("appium:platformVersion", "14.0");
+        desiredCapabilities.setCapability("appActivity", "com.miui.calculator.cal.CalculatorActivity");
+        desiredCapabilities.setCapability("appPackage", "com.miui.calculator");
+        desiredCapabilities.setCapability("appium:user", "poc@nequi.com");
         try {
-            driver= new AndroidDriver(
-                    new URL("http://127.0.0.1:4723/wd/hub"),
-                    desiredCapabilities
-            );
+            driver = new AndroidDriver(
+                    new URL("https://appium.t-evolvers.com/wd/hub"),
+                    desiredCapabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class OwnDriver {
         return driver;
     }
 
-    public static AndroidDriver getDriver(){
+    public static AndroidDriver getDriver() {
         return driver;
     }
 }
