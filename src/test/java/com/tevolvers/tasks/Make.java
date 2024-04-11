@@ -34,10 +34,10 @@ public class Make implements Task {
     public void tapOperator(String operator, Actor actor){
         switch (operator){
             case ("+"):
-                actor.attemptsTo(Click.on(Calculator.OPERAND.of("add")));
+                actor.attemptsTo(Click.on(Calculator.OPERAND.of("plus")));
                 break;
             case ("="):
-                actor.attemptsTo(Click.on(Calculator.EQUAL));
+                actor.attemptsTo(Click.on(Calculator.OPERAND.of("equal")));
                 break;
         }
     }
